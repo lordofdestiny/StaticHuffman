@@ -4,7 +4,7 @@
 
 class Huffman;
 
-class HuffmanDecoder {
+class HuffmanDecoder final {
 private:
 	std::reference_wrapper<const Huffman> _huffamn;
 	HuffmanDecoder(Huffman const& huffman) :

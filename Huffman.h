@@ -6,7 +6,7 @@
 #include "HuffmanEncoder.h"
 #include "HuffmanDecoder.h"
 
-class Huffman {
+class Huffman final {
 public:
 	using CodeT = HuffmanTree::HuffmanCodeT;
 	using ReverseCodeT = std::unordered_map<std::string, char>;

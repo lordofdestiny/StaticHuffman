@@ -5,8 +5,7 @@
 
 class HuffmanTree;
 
-class FrequencyMap
-{
+class FrequencyMap final {
 public:
 	friend HuffmanTree;
 	using AlphabetType = std::vector<char>;

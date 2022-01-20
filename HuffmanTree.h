@@ -8,7 +8,7 @@
 
 class Huffman;
 
-class HuffmanTree {
+class HuffmanTree final {
 private:
 	struct TreeNode;
 	using NodePtr = std::shared_ptr<TreeNode>;
