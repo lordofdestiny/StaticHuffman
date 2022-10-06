@@ -8,13 +8,13 @@ void FrequencyMap::initialize(std::string const& data) const {
 	/* Initialize frequency map */
 	std::ranges::for_each(data,
 		[this](const auto& c) {
-			frequenceis.try_emplace(c, 0);
-			frequenceis[c] += 1;
+			frequencies.try_emplace(c, 0);
+			frequencies[c] += 1;
 		});
 
 	/* Initialize alphabet */
-	alphabet.resize(frequenceis.size());
-	std::ranges::copy(frequenceis | std::views::keys | std::views::reverse,
+	alphabet.resize(frequencies.size());
+	std::ranges::copy(frequencies | std::views::keys | std::views::reverse,
 		alphabet.begin());
 	std::ranges::sort(alphabet);
 }

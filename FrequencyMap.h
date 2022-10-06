@@ -11,7 +11,7 @@ public:
 	using AlphabetType = std::vector<char>;
 	using ContainerType = std::unordered_map<char, uint32_t>;
 private:
-	mutable ContainerType frequenceis{};
+	mutable ContainerType frequencies{};
 	mutable AlphabetType alphabet{};
 public:
 	FrequencyMap(std::string const& data) {
@@ -21,7 +21,7 @@ public:
 		return alphabet;
 	}
 	ContainerType const& getFrequencyMap() const {
-		return frequenceis;
+		return frequencies;
 	}
 private:
 	void initialize(std::string const& data) const;
