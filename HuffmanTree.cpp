@@ -6,7 +6,7 @@ HuffmanTree::HuffmanTree(FrequencyMap const& _fmap) {
 }
 
 void HuffmanTree::constructHuffmanTree(FrequencyMap const& _fmap) {
-	auto const& fdata = _fmap.frequenceis;
+	auto const& fdata = _fmap.frequencies;
 	std::vector<NodePtr> vec(fdata.size());
 	std::ranges::copy(fdata | std::views::transform([](auto const& pair) {
 		return std::make_shared<TreeNode>(pair.first, pair.second);
